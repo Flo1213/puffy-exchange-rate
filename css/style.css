@@ -1,0 +1,122 @@
+/* - FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+*/
+
+/* https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff */
+:root {
+    --logo-color:#ff9f1c;
+
+    --background-color-primary:#000000;
+
+    --color-white-primary:#FFFFFF;
+    --color-gray-primary:#E5E5E5
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    background-color:var(--background-color-primary);
+    color: var(--color-white-primary);
+}
+
+.header {
+    padding: 2.4rem 4.8rem;
+    text-align: center;
+}
+
+.heading-first {
+    color: var(--logo-color);
+    font-size: 3.6rem;
+
+}
+
+.main {
+    height: 90vh;
+    max-width: 100rem;
+    margin: 0 auto;
+    border-top: 1px solid var(--color-gray-primary);
+
+
+    padding: 2.4rem 4.8rem;
+}
+
+/* **********COUNTRY********* */
+.country {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.6rem 0;
+}
+
+.country__info {
+    color: var(--color-gray-primary);
+    font-size: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.country__flag{
+    width: 6rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.country__flag svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.country__currency {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-items: center;
+    gap: 1.6rem;
+
+    width: 40%;
+}
+
+.country__input{
+    padding: 0.4rem ;
+    font-size: 2rem;
+    font-family: inherit;
+    border: 2px solid var(--color-white-primary);
+    border-radius: 1rem;
+    text-align: center;
+    background-color: var(--background-color-primary);
+    /* color: var(--color-white-primary); */
+
+    justify-self: start;
+}
+
+.country__input:focus{
+   outline: none;
+   box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.39);
+}
+
+.country__code {
+    font-size: 1.6rem;
+    justify-self: start;;
+}
