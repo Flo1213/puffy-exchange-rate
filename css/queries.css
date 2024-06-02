@@ -8,6 +8,10 @@
     html {
         font-size: 40%;
     }
+
+    .main {
+        padding: 2.4rem 0.6rem;
+    }
 }
 
 @media (max-width:425px) {
