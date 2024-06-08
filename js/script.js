@@ -8,6 +8,7 @@ import { countryCurrencyArray } from "./data.js";
 // SELECT ELEMENTS
 const countryCodes = document.querySelectorAll(".country__code");
 const countryInputs = document.querySelectorAll(".country__input");
+const keyboard = document.querySelector(".keyboard");
 
 /* const fetchCountries = async function () {
   try {
@@ -122,6 +123,14 @@ const displayOtherInput = function (otherCurrency, e) {
   });
 };
 
+/* const displayKeyboard = function (e) {
+  const rect = e.target.getBoundingClientRect();
+  console.log(rect);
+  keyboard.style.opacity = 1;
+  console.log(rect.top);
+  keyboard.style.top = `${rect.top + 30}px`;
+};
+ */
 // *************Event Handler******************
 document.addEventListener("DOMContentLoaded", function () {
   displayCurrencyCode();
