@@ -44,7 +44,7 @@ const fetchData = async function (country) {
       `https://v6.exchangerate-api.com/v6/b373a9c11a3542a45f331425/latest/${country}`
     );
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     const conversionRate = data.conversion_rates;
     return conversionRate;
   } catch (error) {
@@ -101,11 +101,11 @@ const getInputs = async function (e) {
     const countryInputs = document.querySelectorAll(".country__input");
 
     const targetCurrency = e.target.getAttribute("data-currency");
-    console.log(e.target);
+    // console.log(e.target);
 
     const targetValue = e.target.value;
     const fetchTargetData = await fetchData(targetCurrency);
-    console.log(fetchTargetData);
+    // console.log(fetchTargetData);
 
     countryInputs.forEach((input) => {
       if (input.getAttribute("data-currency") !== targetCurrency) {
