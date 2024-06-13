@@ -8,7 +8,6 @@ let matchedData = [];
 // SELECT ELEMENTS
 const countryAll = document.querySelectorAll(".country");
 const container = document.querySelector(".container");
-const countryIcons = document.querySelectorAll(".country__icon");
 
 const btn = document.querySelector(".btn");
 
@@ -178,6 +177,7 @@ const removeNewCurrency = function (targetItem) {
 
 const deleteCurrency = function (e) {
   e.target.closest(".country").remove();
+  console.log(e.target.closest(".country"));
   bindEventListeners();
 };
 
@@ -190,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const bindEventListeners = function () {
   const countryInputs = document.querySelectorAll(".country__input");
+  const countryIcons = document.querySelectorAll(".country__icon");
 
   countryInputs.forEach((countryInput) => {
     countryInput.addEventListener("input", function (e) {
@@ -197,6 +198,12 @@ const bindEventListeners = function () {
       getInputs(e);
     });
   });
+
+  countryIcons.forEach((icon) =>
+    icon.addEventListener("click", function (e) {
+      deleteCurrency(e);
+    })
+  );
 };
 
 btn.addEventListener("click", function () {
@@ -206,11 +213,5 @@ btn.addEventListener("click", function () {
 optionItems.forEach((optionItem) =>
   optionItem.addEventListener("click", function (e) {
     addNewCurrency(e);
-  })
-);
-
-countryIcons.forEach((icon) =>
-  icon.addEventListener("click", function (e) {
-    deleteCurrency(e);
   })
 );

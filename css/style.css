@@ -33,12 +33,21 @@ body {
     background-color:var(--background-color-primary);
     color: var(--color-white-primary);
 
-    overflow: hidden;
+    overflow: scrollY;
 }
 
 .header {
     padding: 2.4rem 4.8rem;
     text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__img{
+    width:  5.2rem;
 }
 
 .heading-first {
@@ -49,7 +58,7 @@ body {
 
 
 .main {
-    height: 85dvh;
+    height: 75dvh;
     padding: 2.4rem 4.8rem;
 
     display: flex;
@@ -64,7 +73,6 @@ body {
     border-top: 1px solid var(--color-gray-primary);
 
     width: 100%;
-
 }
 
 /* **********COUNTRY********* */
